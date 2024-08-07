@@ -7,12 +7,3 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
-Article.destroy_all
-
-for i in 1..10
-  new_article = Article.new(title: Faker::Book.title, content: Faker::Quote.most_interesting_man_in_the_world )
-  puts "Created article: #{new_article[:title]}"
-  new_article.save
-end
-
-puts "Seeding completed!"
